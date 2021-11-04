@@ -4,9 +4,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Brewing Methods</title>
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: RGB(252,243,219);
+      }
+      
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+        background-color: #a9b637;
+        color: black;
+      }
+      
+      .topnav a.active {
+        background-color: #a9b637;
+        color: white;
+      }
+
+      
+      #heading{text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  
+    }
+    #footer{text-align: center;
+    font-weight:lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    padding:50px 100px 50px 100px
+
+    }
+    #intro_video{
+      margin-left:auto;
+      margin-right: auto;
+      display:block
+    }
+    #avsl{
+        border-collapse: collapse;
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .subhead{
+        text-align: center;
+        border: 4px solid black;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+    }
+    .al{
+        height:80%;
+        border: 4px solid black;
+    }
+    .alimg{
+        height: 500px;
+        width:500px;
+    }
+    .altext{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        text-align: left;
+        padding:5px 15px 5px 15px;
+    }
+    #intro{
+        text-align: center;
+        font-size: large;
+    
+    }
+
+    </style>
 </head>
 <body>
     
+    <div class="topnav">
+        <a href="home-page.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="Ingredient.html">Ingredients</a>
+        <a class="active" href="method.html">Method</a>
+        <a href="new-forms.html">New forms of Crafted Beer</a>
+        <a href="contact-and-discussion.html">Contact and Discussion</a>
+      </div>
+      <h1 id="heading">Brewing Methods</h1>
+      <br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DsCwlpwVhug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="intro_video"></iframe>
+      <p id="intro">Ale and Lager are the two major methods of brewing. The beer brewed by Ale and Lager are drasticly different.The Industrial beer is usually brewed with lager. The crafted beer usualy goes with Ale</p>
+      <table id="avsl">
+          <tr>
+              <th class="subhead">Ale</th>
+              <th class="subhead">Lager</th>
+          </tr>
+          <tr>
+              <td class="al"><div><img src="/images/ipavspaleale_main.jpg" alt="ale" title="ale" class="alimg"></div>
+            <ul class="altext">
+                <li>Top-fermenting Yeast</li>
+                <li>Warmth Temperature</li>
+                <li>Richer Taste</li>
+                <li>Darker Color</li>
+                <li>Crafted Brewery Tends to Produce</li>
+            </ul></td>
+            
+              <td class="al"><div><img src="/images/6BCFBDA8-397F-4A3A-828155D2F8B85FEF_source.jpg" alt="lager" title="lager" class="alimg"></div>
+            <ul class="altext">
+                <li>Bottom-fermenting Yeast</li>
+                <li>Cold Temperature</li>
+                <li>Need to Hold Still for Long Time</li>
+                <li>More Thirst-quenching</li>
+                <li>More Expensive to make for Higher Quality</li>
+                <li>Lighter Color</li>
+                <li>Mass Production Tends to Produce</li>
+
+            </ul></td>
+          </tr>
+      </table>
+
+      <div id="footer">
+        By Tengyue Liu 
+        <br>
+        Contact Me by <a href="mailto:tliu1@babson.edu">tliu1@babson.edu </a>
+      </div>
 </body>
 </html>
