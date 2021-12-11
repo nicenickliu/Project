@@ -96,6 +96,17 @@ display:block}
       font-size: larger;
       font-weight: bold;
     }
+    a:hover{
+      font-weight: bolder;
+      font-size: large;
+    }
+    a {
+      text-decoration: none;
+    }
+    #emailpic{
+      width:20px;
+      height: 20px;
+    }
       </style>
 </head>
 <body>
@@ -124,18 +135,21 @@ display:block}
         <table>
             <caption id="table_title">Highlights</caption>
             <tr>
-                <td class="subhead">New Forms and History
+                <td class="subhead" id="slide_td"><span id="slide_title">
+                  New Forms and History
+                  </span>
                     
-                    <div class="content">
+                    <div class="content" id="slide_text">
                         Modern U.S. craft beer history accerlated in 1960s as the popularity of homebrewing and microbreweries increase. In 2018, the number of brewers has increased to more than 7000 according to Brewers Association. The favored tastes have also been shifted to less alcohol and <a href="https://www.cnbc.com/2017/05/26/changing-tastes-and-habits-make-major-brewers-change-tack.html"> premiumization
                         </a>.
+                        </div>
                         <div>
                           <a href="https://www.mcall.com/business/mc-outlook-lehigh-valley-beer-history-20150314-story.html">
-                        <img src="/images/old time brewey.jpg" alt="Old time Brewery" title="old time brewey"class="con_pic"></a>
+                        <img src="/images/old-time-brewey.jpg" alt="Old time Brewery" title="old time brewey"class="con_pic" id="slide_pic"></a>
                       </div>
-                    </div>
+                    
                 </td>
-                <tr>
+                <!-- <tr>
                 <td class="subhead">Ingredients, Brewing Methods, and Tastes
                     <div class="content">
                       Ingredients and brewing methods are the two most important factors playing into the tastes of the crafted beer. For brewing method, The astringency, body, carbonation and finish contribute to the overall palate of a beer - the way it tastes and feels on the mouth and tongue.  Proteins and residual sugars from the malt, extracted during brewing and modified during fermentation, determine the final body of consistency of the liquid. For ingredient, the four most common ingredients are water, grain, hops, and yeast. There are a lot other ingredients, such as fruits bringing various flavors to drinks.
@@ -152,7 +166,7 @@ display:block}
                       Although beer as a whole has not been growing recently, there has been exceelent market opportunities in the crafted beer industry. The taste of the young people has beening changing, and quickly adapting to the changes would bring great market sucesses.For example, due to the popularity of new products of Boston Beer Campany, the revenue growth for the company has increased more than 30%.
                     </div>
                 </td>
-                </tr>
+                </tr> -->
             </tr>
         </table>
    
@@ -160,7 +174,58 @@ display:block}
     <div id="footer">
       By Tengyue Liu 
       <br>
-      Contact Me by <a href="mailto:tliu1@babson.edu">tliu1@babson.edu </a>
+      Contact Me by <a href="mailto:tliu1@babson.edu"><img src="images/email.png" alt="" id="emailpic"></a>
     </div>
+    <script>
+      const slides=[
+        "images/old-time-brewey.jpg",
+        "images/beer-ingredient-uk.jpg",
+        "images/market-opportunities.jpg",
+
+      ]
+      const text=[
+      "Modern U.S. craft beer history accerlated in 1960s as the popularity of homebrewing and microbreweries increase. In 2018, the number of brewers has increased to more than 7000 according to Brewers Association. The favored tastes have also been shifted to less alcohol and premiumization",
+      "Ingredients and brewing methods are the two most important factors playing into the tastes of the crafted beer. For brewing method, The astringency, body, carbonation and finish contribute to the overall palate of a beer - the way it tastes and feels on the mouth and tongue.  Proteins and residual sugars from the malt, extracted during brewing and modified during fermentation, determine the final body of consistency of the liquid. For ingredient, the four most common ingredients are water, grain, hops, and yeast. There are a lot other ingredients, such as fruits bringing various flavors to drinks.",
+      "Although beer as a whole has not been growing recently, there has been exceelent market opportunities in the crafted beer industry. The taste of the young people has beening changing, and quickly adapting to the changes would bring great market sucesses.For example, due to the popularity of new products of Boston Beer Campany, the revenue growth for the company has increased more than 30",
+
+
+      ]
+      const title=["New Forms and History",
+      "Ingredients, Brewing Methods, and Tastes",
+      "Market Opportunities",
+
+    ]
+      const color=["gray",
+      "darkkhaki",
+      "olive"
+
+    ]
+     
+    let i= 0;
+
+        function slideShow(){
+          let te=document.getElementById("slide_text");
+          let ti=document.getElementById("slide_title");
+          console.log("color")
+          let pic=document.getElementById("slide_pic");
+          let td=document.getElementById("slide_td");
+      
+            if (i==slides.length){
+                i = 0;
+            }
+            pic.src=slides[i];
+            ti.innerText=title[i];
+            te.innerText=text[i];
+            td.style.borderColor=color[i];
+            
+            i++;
+           
+            setTimeout(slideShow,5000);
+        }
+        document.querySelector("body").onload=function(){
+            slideShow();
+        }
+
+    </script>
 </body>
 </html>

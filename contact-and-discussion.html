@@ -84,6 +84,23 @@
       margin-left: auto;
       margin-right: auto;
     }
+    #reset{
+      
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    a:hover{
+      font-weight: bolder;
+      font-size: large;
+    }
+    a {
+      text-decoration: none;
+    }
+    #emailpic{
+      width:20px;
+      height: 20px;
+    }
    
 
     </style>
@@ -105,7 +122,7 @@
         
     </div>
     <h2 class="heading">Or Leave a comment here</h2>
-    <form method="post" id="form" action="">
+    <form method="post" id="form" action="https://oim-apis.herokuapp.com/form2">
     <label for="name">
       <input type="text" placeholder="Please Type in Your Name" class="comment">
     </label>
@@ -129,6 +146,7 @@
     <br>
     <div>
     <button type="submit" id="submit">Submit</button></div>
+    <button type="reset" id="reset">Button</button>
   </form>
     
 </body>

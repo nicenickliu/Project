@@ -73,10 +73,16 @@
     .his_button{
         margin-left:auto;
       margin-right: auto;
-      display:block;
+      
       padding: 15px;
       background-color: transparent;
       border:none;
+    }
+
+    #button_div{
+      display: flex;
+    flex-direction: row;
+     justify-content: center;
     }
     .content{
         margin-left: auto;
@@ -96,6 +102,17 @@
 display:block;
 
     }
+    a:hover{
+      font-weight: bolder;
+      font-size: large;
+    }
+    a {
+      text-decoration: none;
+    }
+    #emailpic{
+      width:20px;
+      height: 20px;
+    }
     </style>
 </head>
 <body>
@@ -107,51 +124,120 @@ display:block;
         
         <a href="new-forms.html">New forms of Crafted Beer</a>
         <a href="contact-and-discussion.html">Contact</a>
+        <a href="sitemap.html">Sitemap</a>
       </div>
   <h1 id="heading">
     History of Crafted Beer
   </h1>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Vm0ritbm1BM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="intro_video"></iframe>
-  <div>
-  <button type="menu" class="his_button">
-<img src="/images/button_early-days.png" alt="early days of crafted beer" >
+  <div id="button_div">
+  <button type="menu" class="his_button" id="early_but"><a href="#early">
+  <img src="/images/button_early-days.png" alt="early days of crafted beer" ></a>
   </button>
-  </div>
-  <div>
-  <button class="his_button">
-<img src="/images/button_developing-period.png" alt="developing period of crafted beer" >
+
+  <button class="his_button" id="deve_but"><a href="#developing">
+<img src="/images/button_developing-period.png" alt="developing period of crafted beer" > </a>
   </button>
-  </div>
-  <button class="his_button">
-<img src="/images/button_current-times.png" alt="current times of crafted beer" >
+  
+  <button class="his_button" id="curr_but">
+    <a href="#current">
+<img src="/images/button_current-times.png" alt="current times of crafted beer" > 
+</a>
   </button>
+</div>
   <!-- After adding the javascript secition, i would make the part here to be controlled by buttons  -->
-  <div class="content">
-  <p>
+  <div class="content" id="earlytext">
+  <p id="early">
       <span class="subtitle">Early-days:</span>The history of crafted beer was hard to define. The first solide proof of beer production comes from the period of Sumerianns around 4000BCE. During an archeological excavation in Mesopotamia, tablet was discovered that showed the villagers drinking "beer" from a bowl with straws. In 500-600, beer started to gain crossregional popularity since some people started to believe drinking beer helps fight the plague.
   </p>
-  <p>
-      In modern times, at the beginning, crafted beer was more of an European thing. European people have the long tradtion of brewing beer at home, which was the early form of crafted beer. In 1573, Heinrich Knaust writes the first extensive book on brewing in Germany describing in detail about 150 different beers. Extensive amount of beer factories start to appear in Europe.
+  <p id="developing">
+    In modern times, at the beginning, crafted beer was more of an European thing. European people have the long tradtion of brewing beer at home, which was the early form of crafted beer. In 1573, Heinrich Knaust writes the first extensive book on brewing in Germany describing in detail about 150 different beers. Extensive amount of beer factories start to appear in Europe.
   </p>
-  <p>
-      In United States, the first craft brewery in California was founded in 1829, and the craft breweries start to appear in different states. The brewing process also became easier and easier as the industrail revolution proceed. For instance, equipment like hyfrometer and drom roaster were born. It became easier for people to brew; meanwhile, it also led the pure industrial beer to gain more populairty over the people. 
+  <p id="current">
+    In United States, the first craft brewery in California was founded in 1829, and the craft breweries start to appear in different states. The brewing process also became easier and easier as the industrail revolution proceed. For instance, equipment like hyfrometer and drom roaster were born. It became easier for people to brew; meanwhile, it also led the pure industrial beer to gain more populairty over the people. 
   </p>
   </div>
-  <div class="content">
+  <div class="content" id="developingtext">
       <p>
       <span class="subtitle">Growing period:</span> The beer brewing industry went through a period of being driven to bankruptcy due to the price and quantity advanatages of industrial beer. The central topic of brewing became the mass production. The more quantity and more marketing people do, the more profit people can make. In addtion, brewers start to water down the beers to increase their profit margin, which gradually becomes a taste preference even for the majority of drinkers now. However, the prohibition period takes a break from the mass production of beer and transfers to homebrewing underground. When the prohibition is over, mass production of beer takes back the lead again; however, some people passed down the underground homebrewing tradtions. There were also some beneficial tax policies for small brewers all around the world including United States, Japan, and Europe. For example, the Small Brewers Excise Tax Differential was passed in September 1976. In 1978, homebrewing finally got legalized, homebrewers can publicly brew their own beer.
       </p>
       <img src="/images/industrial revol.jpg" alt="Industrail Revolution and Beer" id="indus">
   </div>
-  <div class="content">
+  <div class="content" id="currenttext">
       <p>
-        <span class="subtitle"> Current Times:</span> As mass produced beer becomes more and more boring for consumers, the crafted brewery becomes a way to have more diversified drinks as people want. The flavors are a lot more flexible with different products. A wider range of brewing methods and ingredients arose. The gaint brewers also loved to acquire relatively smaller crafted brewers. From mass production to more diversifed, personalized choices is the biggest current trend.
+        <span class="subtitle" > Current Times:</span> As mass produced beer becomes more and more boring for consumers, the crafted brewery becomes a way to have more diversified drinks as people want. The flavors are a lot more flexible with different products. A wider range of brewing methods and ingredients arose. The gaint brewers also loved to acquire relatively smaller crafted brewers. From mass production to more diversifed, personalized choices is the biggest current trend.
       </p>
   </div>
   <div id="footer">
     By Tengyue Liu 
     <br>
-    Contact Me by <a href="mailto:tliu1@babson.edu">tliu1@babson.edu </a>
+    Contact Me by <a href="mailto:tliu1@babson.edu"><img src="images/email.png" alt="" id="emailpic"></a>
   </div>
+  <script>
+    function early(){
+      const e=document.getElementById("early_but");
+      const d=document.getElementById("deve_but");
+      const c=document.getElementById("curr_but");
+      const eText=document.getElementById("earlytext")
+      const dText=document.getElementById("developingtext");
+      const cText=document.getElementById("currenttext");
+      dText.style.display="none";
+      cText.style.display="none";
+      eText.style.display="block";
+      eText.style.backgroundColor="lightgrey"
+      
+
+
+
+
+    }
+
+    document.getElementById("early_but").onclick=function(){
+      early();
+    }
+    function developing(){
+      const e=document.getElementById("early_but");
+      const d=document.getElementById("deve_but");
+      const c=document.getElementById("curr_but");
+      const eText=document.getElementById("earlytext")
+      const dText=document.getElementById("developingtext");
+      const cText=document.getElementById("currenttext");
+      eText.style.display="none";
+      cText.style.display="none";
+      dText.style.display="block";
+      dText.style.backgroundColor="lightyellow"
+      
+
+
+
+
+    }
+
+    document.getElementById("deve_but").onclick=function(){
+      developing();
+    }
+    function current(){
+      const e=document.getElementById("early_but");
+      const d=document.getElementById("deve_but");
+      const c=document.getElementById("curr_but");
+      const eText=document.getElementById("earlytext")
+      const dText=document.getElementById("developingtext");
+      const cText=document.getElementById("currenttext");
+      dText.style.display="none";
+      eText.style.display="none";
+      cText.style.display="block";
+      cText.style.backgroundColor="moccasin";
+      
+
+
+
+
+    }
+
+    document.getElementById("curr_but").onclick=function(){
+      current();
+    }
+   
+  </script>
 </body>
 </html>
