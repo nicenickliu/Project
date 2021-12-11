@@ -124,7 +124,7 @@
     <h2 class="heading">Or Leave a comment here</h2>
     <form method="post" id="form" action="https://oim-apis.herokuapp.com/form2">
     <label for="name">
-      <input type="text" placeholder="Please Type in Your Name" class="comment">
+      <input type="text" placeholder="Please Type in Your Name" class="comment"id="name">
     </label>
     <br>
     <div class="radio">
@@ -139,7 +139,7 @@
       </label>
       </div>
       <br>
-      <div class="textarea">
+      <div class="textarea" id="ta">
     <label for="comment">
       <textarea name="comment" id="comments" cols="30" rows="10" placeholder="Please type your comment here"></textarea>
     </label></div>
@@ -148,6 +148,23 @@
     <button type="submit" id="submit">Submit</button></div>
     <button type="reset" id="reset">Button</button>
   </form>
+  <script>
+    function check(){
+    const ta=document.getElementById("ta").value;
+    const na=document.getElementById("name").value;
+    
+    if (ta===""){
+      alert("The Cell is Empty!")
+    }if (na===""){
+      alert("Please enter a valid name!")
+    }}
+    
+    document.getElementById("submit").onclick=function(e){
+      check();
+      e.preventDefault();
+    }
+    
+  </script>
     
 </body>
 </html>

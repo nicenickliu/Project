@@ -97,6 +97,10 @@
       width:20px;
       height: 20px;
     }
+    #car{
+      width:100px;
+      height:100px;
+    }
 
     </style>
 </head>
@@ -119,29 +123,324 @@
       <table id="tab_bran">
           <tr>
               <td class="bran">
-                  <a href="https://www.newbelgium.com/beer/fat-tire/"><img src="/images/ci-new-belgium-fat-tire-a8742c33f98d4519.jpeg" alt="new belgium" title="new belgium" class="brand"></a>
+                  <a href="https://www.newbelgium.com/beer/fat-tire/"><img src="/images/ci-new-belgium-fat-tire-a8742c33f98d4519.jpeg" alt="new belgium" title="new belgium" class="brand" id="fat"></a>
               </td>
-              <td class="bran">
-                  <a href="https://www.brewdog.com/usa/"><img src="/images/ci-brewdog-clockwork-tangerine-ipa-f7722ae21ee7ad2f.jpeg" alt="brewdog" title="brewdog"class="brand"></a>
+              <td class="bran" >
+                  <a href="https://www.brewdog.com/usa/"><img src="/images/ci-brewdog-clockwork-tangerine-ipa-f7722ae21ee7ad2f.jpeg" alt="brewdog" title="brewdog"class="brand" id="brewdog"></a>
               </td>
-              <td class="bran">
-                  <a href="https://sierranevada.com/beer/pale-ale/"><img src="/images/ci-sierra-nevada-hazy-ipa-1ae41056d225af7c.jpeg" alt="sierranevada" title="sierranevada" class="brand"></a>
+              <td class="bran" >
+                  <a href="https://sierranevada.com/beer/pale-ale/"><img src="/images/ci-sierra-nevada-hazy-ipa-1ae41056d225af7c.jpeg" alt="sierranevada" title="sierranevada" class="brand" id="hazy"></a>
               </td>
-              <td class="bran">
-                  <a href="https://yonayonaale.com/en/"><img src="/images/yona.PNG" alt="yona" title="yona"class="brand" ></a>
+              <td class="bran" >
+                  <a href="https://yonayonaale.com/en/"><img src="/images/yona.PNG" alt="yona" title="yona"class="brand" id="yona"></a>
               </td>
-              <td class="bran">
-                  <a href="https://weibo.com/u/7467562769"><img src="/images/u=3119818832,334345986&fm=15&fmt=auto.webp" alt="zouqi" title="zouqi" class="brand"></a>
+              <td class="bran" >
+                  <a href="https://weibo.com/u/7467562769"><img src="/images/u=3119818832,334345986&fm=15&fmt=auto.webp" alt="zouqi" title="zouqi" class="brand"id="zouqi"></a>
               </td>
-              <td class="bran">
-                  <a href="http://www.pandabrew.com/"><img src="/images/u=587916724,376599455&fm=26&fmt=auto.webp" alt="pandabrew" title="pandabrew" class="brand"></a>
+              <td class="bran" >
+                  <a href="http://www.pandabrew.com/"><img src="/images/u=587916724,376599455&fm=26&fmt=auto.webp" alt="pandabrew" title="pandabrew" class="brand" id="panda"></a>
               </td>
           </tr>
+          <div> <p id="text"></p></div>
       </table>
+      <div>
+        <form class="center">
+          <br>
+          <div>
+            <div>
+              Tasting crafted beer is nice, but you still need to be careful about how much you are drinking. If you drink to a certain amount, you should not drive! Check if you can still drive by putting in how many 12 ounce beer you have drunk.
+            </div>
+            <label
+              >How many beer you have had today?
+              <input name="beer" size="10" type="text" id="beer" />
+            </label>
+            
+          </div>
+          <div>
+            <input name="Check" type="button" value="Check" id="check" />
+            <input name="reset" type="reset" value="Reset" />
+          </div>
+          <div id="result"></div>
+        </form>
+
+        <img src="images/car.png" alt="car" id="car">
+    
       <div id="footer">
         By Tengyue Liu 
         <br>
         Contact Me by <a href="mailto:tliu1@babson.edu"><img src="images/email.png" alt="" id="emailpic"></a>
       </div>
+
+      <script>
+        function faten(){
+          const fat=document.getElementById("fat");
+          fat.style.width=330+"px";
+          fat.style.height=450+ "px";
+          const text=document.getElementById("text");
+          text.style.backgroundColor="white";
+          text.style.textAlign="center";
+          text.style.display="block";
+          text.innerText="This is a Beligium Style Beer called Fat Tire. It has own mutiple awards last year.";
+          text.style.fontSize="larger";
+          text.style.fontWeight="bold";
+       
+
+
+          console.log(fat.style.width)
+          
+     
+
+        }
+        document.getElementById("fat").onmouseover=function(){
+          faten()
+        }
+        
+        function fatre(){
+          const fat=document.getElementById("fat");
+          fat.style.width=220+"px";
+          fat.style.height=300+ "px";
+          const text=document.getElementById("text");
+          text.style.display="none"
+
+
+          console.log(fat.style.width)
+          
+     
+
+        }
+        document.getElementById("fat").onmouseout=function(){
+          fatre()
+        }
+        function brewdogen(){
+          const bre=document.getElementById("brewdog");
+          bre.style.width=330+"px";
+          bre.style.height=450+ "px";
+          const text=document.getElementById("text");
+          text.style.backgroundColor="white";
+          text.style.textAlign="center";
+          text.style.display="block";
+          text.innerText="Brewdog is a mutlinational brewey and pub chain based in Scotland. Recently, they have been famous for their IPAs";
+          text.style.fontSize="larger";
+          text.style.fontWeight="bold";
+       
+
+
+          console.log(bre.style.width)
+          
+     
+
+        }
+        document.getElementById("brewdog").onmouseover=function(){
+          brewdogen()
+        }
+        
+        function brewdogre(){
+          const bre=document.getElementById("brewdog");
+          bre.style.width=220+"px";
+          bre.style.height=300+ "px";
+          const text=document.getElementById("text");
+          text.style.display="none"
+
+
+          console.log(bre.style.width)
+          
+     
+
+        }
+        document.getElementById("brewdog").onmouseout=function(){
+          brewdogre()
+        }
+        function hazyen(){
+          const haz=document.getElementById("hazy");
+          haz.style.width=330+"px";
+          haz.style.height=450+ "px";
+          const text=document.getElementById("text");
+          text.style.backgroundColor="white";
+          text.style.textAlign="center";
+          text.style.display="block";
+          text.innerText="Hazy IPA has a cloudy appearance. One can't see through the beer.It has a fullness of flavor";
+          text.style.fontSize="larger";
+          text.style.fontWeight="bold";
+       
+
+
+          console.log(haz.style.width)
+          
+     
+
+        }
+        document.getElementById("hazy").onmouseover=function(){
+          hazyen()
+        }
+        
+        function hazyre(){
+          const haz=document.getElementById("hazy");
+          haz.style.width=220+"px";
+          haz.style.height=300+ "px";
+          const text=document.getElementById("text");
+          text.style.display="none"
+
+
+          console.log(haz.style.width)
+          
+     
+
+        }
+        document.getElementById("hazy").onmouseout=function(){
+          hazyre()
+        }
+        function yonaen(){
+          const yon=document.getElementById("yona");
+          yon.style.width=330+"px";
+          yon.style.height=450+ "px";
+          const text=document.getElementById("text");
+          text.style.backgroundColor="white";
+          text.style.textAlign="center";
+          text.style.display="block";
+          text.innerText="Yona Yona Ale features a fresh scent reminiscent of the citrus of the aroma hop Cscade and a gentle malt sweetness.";
+          text.style.fontSize="larger";
+          text.style.fontWeight="bold";
+       
+
+
+          console.log(bre.style.width)
+          
+     
+
+        }
+        document.getElementById("yona").onmouseover=function(){
+          yonaen()
+        }
+        
+        function yonare(){
+          const yon=document.getElementById("yona");
+          yon.style.width=220+"px";
+          yon.style.height=300+ "px";
+          const text=document.getElementById("text");
+          text.style.display="none"
+
+
+          console.log(yon.style.width)
+          
+     
+
+        }
+        document.getElementById("yona").onmouseout=function(){
+          yonare()
+        }
+        function pandaen(){
+          const pan=document.getElementById("panda");
+          pan.style.width=330+"px";
+          pan.style.height=450+ "px";
+          const text=document.getElementById("text");
+          text.style.backgroundColor="white";
+          text.style.textAlign="center";
+          text.style.display="block";
+          text.innerText="Panda Crafted Beer is an brand and Chinese BBC chain in China. It features a thick taste with fruit flavor";
+          text.style.fontSize="larger";
+          text.style.fontWeight="bold";
+       
+
+
+          console.log(pan.style.width)
+          
+     
+
+        }
+        document.getElementById("panda").onmouseover=function(){
+          pandaen()
+        }
+        
+        function pandare(){
+          const pan=document.getElementById("panda");
+          pan.style.width=220+"px";
+          pan.style.height=300+ "px";
+          const text=document.getElementById("text");
+          text.style.display="none"
+
+
+          console.log(pan.style.width)
+          
+     
+
+        }
+        document.getElementById("panda").onmouseout=function(){
+          pandare()
+        }
+
+        function zouqien(){
+          const zou=document.getElementById("zouqi");
+          zou.style.width=330+"px";
+          zou.style.height=450+ "px";
+          const text=document.getElementById("text");
+          text.style.backgroundColor="white";
+          text.style.textAlign="center";
+          text.style.display="block";
+          text.innerText="Zouqi is a rising brand in China. It features a refreshing taste. They brew wine ingredients with the beer brewery methods.";
+          text.style.fontSize="larger";
+          text.style.fontWeight="bold";
+       
+
+
+          console.log(zou.style.width)
+          
+     
+
+        }
+        document.getElementById("zouqi").onmouseover=function(){
+          zouqien()
+        }
+        
+        function zouqire(){
+          const zou=document.getElementById("zouqi");
+          zou.style.width=220+"px";
+          zou.style.height=300+ "px";
+          const text=document.getElementById("text");
+          text.style.display="none"
+
+
+          console.log(zou.style.width)
+          
+     
+
+        }
+        document.getElementById("zouqi").onmouseout=function(){
+          zouqire()
+        }
+        function drinkDrive(){
+          const b=document.getElementById("beer").value;
+          const r=document.getElementById("result");
+          bFlo=parseFloat(b);
+          if (isNaN(b)){
+                alert("Please enter a number");
+          }
+          else if(b==""){alert("Checking your status is important! Please don't leave the cell empty")}
+          else if
+          (bFlo<2.5){
+            r.innerText="Your Blood Alcohol Concentration is below 0.08%. You are fine drinking, but still be careful! Don't drive if you feel not okay.";
+          }else if(bFlo>2.5){
+            r.innerText="Your Blood Alcohol Concentration is above 0.08%. Don't Drive! Drunkdriving is extremely DANGEROUS! ";
+            r.style.color="red";
+            r.style.fontWeight="bold";
+            r.style.fontSize="larger";
+
+          }
+
+        }
+        document.getElementById("check").onclick=function(){
+          drinkDrive()
+        }
+        function car(){
+          const c=document.getElementById("car")
+          for(i=0;i<=500;i+=50) {
+            c.style.left=i+"px";
+
+          }
+          setTimeout(car,1000)
+        }
+        document.querySelector("body").onload=function(){
+            car();
+        }
+      </script>
 </body>
 </html>
