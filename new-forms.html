@@ -100,6 +100,10 @@
     #car{
       width:100px;
       height:100px;
+      display:block;
+      position: absolute;
+      left:100px;
+
     }
 
     </style>
@@ -430,17 +434,22 @@
         document.getElementById("check").onclick=function(){
           drinkDrive()
         }
+         let i=0;
         function car(){
-          const c=document.getElementById("car")
-          for(i=0;i<=500;i+=50) {
-            c.style.left=i+"px";
-
-          }
-          setTimeout(car,1000)
-        }
+        const c=document.getElementById("car");
+        if (i<75){
+        i<=20;i++; 
+         c.style.left=i*20+"px";
+        setTimeout(car,500);}
+        else if(i>=50){
+          c.style.left=100 +"px"
+        }}
+          
+         
+        
         document.querySelector("body").onload=function(){
             car();
-        }
+         }
       </script>
 </body>
 </html>
